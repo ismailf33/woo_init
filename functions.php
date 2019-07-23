@@ -1,6 +1,7 @@
 <?php
 add_action('after_setup_theme' , 'wp_car_action');
 function wp_car_action(){
+add_theme_support('title-tag');
 add_theme_support('post-formats',array('video','audio','aside','gallery'));
 add_theme_support('post-thumbnails', array('post' , 'page'));
 set_post_thumbnail_size( 300, 200, true);
@@ -8,6 +9,7 @@ add_image_size( 'myFeatureImage',1300, 700, true);
 }
 
 function wp_woo_enqueue(){
+    wp_enqueue_style('font-awesome' , get_template_directory_uri().'/assets/css/font-awesome.css');
     wp_enqueue_style('bootstrap' , get_template_directory_uri().'/assets/css/bootstrap.min.css');
     wp_enqueue_style('main' , get_template_directory_uri().'/assets/css/main.css');
     wp_enqueue_style('blue' , get_template_directory_uri().'/assets/css/blue.css ');
@@ -16,7 +18,10 @@ function wp_woo_enqueue(){
     wp_enqueue_style('animate' , get_template_directory_uri().'/assets/css/animate.min.css');
     wp_enqueue_style('rateit' , get_template_directory_uri().'/assets/css/rateit.css');
     wp_enqueue_style('bootstrap-select' , get_template_directory_uri().'/assets/css/bootstrap-select.min.css');
-
+    wp_enqueue_style('font-roboto' , '//fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+    wp_enqueue_style('font-open-sans' , '//fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800');
+    wp_enqueue_style('font-Montserrat' , '//fonts.googleapis.com/css?family=Montserrat:400,700');
+   
     wp_enqueue_style('core' , get_stylesheet_uri() );
 
     wp_enqueue_script('jquery' , get_theme_file_uri().'/assets/js/jquery-1.11.1.min.js' , array( ) , 2.0,true);
@@ -48,3 +53,10 @@ function ceom_woocommerce_support(){
 add_theme_support('woocommerce');
 }
 add_action('after_setup_theme' , 'ceom_woocommerce_support');
+
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
+function woocommerce_oo_get_sidebar() {
+    wc_get_template( 'template-part/sidebar/sidebar.php' );   
+  }
+add_action('woocommerce_sidebar' ,'woocommerce_oo_get_sidebar');

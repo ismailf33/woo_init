@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?> class="no-js no-svg">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="MediaCenter, Template, eCommerce">
-    <meta name="robots" content="all">
-    <title>eCommerce premium HTML5 & CSS3 Template</title>
-    <!-- Bootstrap Core CSS -->
-  
-    <!-- Icons/Glyphs -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/font-awesome.css">
-
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<?php wp_head();?>
+    <?php wp_head();?>
 </head>
 
 <body <?php body_class();?> >
