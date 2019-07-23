@@ -54,9 +54,22 @@ add_theme_support('woocommerce');
 }
 add_action('after_setup_theme' , 'ceom_woocommerce_support');
 
+if ( ! function_exists( 'woocommerce_get_sidebar' ) ) { 
+ 
+    /** 
+     * Get the shop sidebar template. 
+     * 
+     */ 
+    function woocommerce_get_sidebar() { 
+        wc_get_template( 'template-part/sidebar/sidebar.php' ); 
+    } 
+  } 
+
+/*
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 function woocommerce_oo_get_sidebar() {
     wc_get_template( 'template-part/sidebar/sidebar.php' );   
   }
 add_action('woocommerce_sidebar' ,'woocommerce_oo_get_sidebar');
+*/
