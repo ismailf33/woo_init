@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row" style="margin-top: 30px;">
                 <div class="blog-page">                      
-                    <div class="col-md-9">
+                    <div class="col-md-9">          
                  <?php woocommerce_content();?>
                     </div>
         <?php get_template_part('template-part/sidebar/right-sidebar','right-sidebar')?>
