@@ -21,7 +21,7 @@
 <?php wp_head();?>
 </head>
 
-<body <?php body_class();?> class="cnt-home" >
+<body <?php body_class();?> >
     <header class="header-style-1">
         <div class="top-bar animate-dropdown">
             <div class="container">
