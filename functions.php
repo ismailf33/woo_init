@@ -43,3 +43,8 @@ register_nav_menu('top_menu' , __('Top menu' , 'ecom'));
     }
 }
 add_action('init', 'ecomMenu');
+
+function ceom_woocommerce_support(){
+add_theme_support('woocommerce');
+}
+add_action('after_setup_theme' , 'ceom_woocommerce_support');
