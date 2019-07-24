@@ -36,6 +36,12 @@ do_action( 'woocommerce_sidebar' );
 	<div id="myTabContent" class="tab-content category-list">
 		<div class="tab-pane active " id="grid-container">
 			<div class="category-product">
+			<div class="col-md-9">
+				<?php get_template_part( 'template-part/content/banner' , 'woocommerce' );?> 
+				
+					<div class="search-result-container ">
+                        <div id="myTabContent" class="tab-content category-list">
+                            <div class="tab-pane active " id="grid-container">
 <?php
 /**
  * Hook: woocommerce_before_main_content.
@@ -115,14 +121,15 @@ if ( woocommerce_product_loop() ) {
  */
 do_action( 'woocommerce_after_main_content' );
 
-
-
-?>						</div>	
-					</div>	
-				</div>	
-			</div>	
+?>										</div>	
+									</div>	
+								</div>	
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+
 <?php
 get_footer( 'shop' );

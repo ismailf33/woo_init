@@ -65,11 +65,8 @@ if ( ! function_exists( 'woocommerce_get_sidebar' ) ) {
     } 
   } 
 
-/*
-remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-
-function woocommerce_oo_get_sidebar() {
-    wc_get_template( 'template-part/sidebar/sidebar.php' );   
+function woocommerce_get_banner() {
+    wc_get_template( 'template-part/content/banner.php' );   
   }
-add_action('woocommerce_sidebar' ,'woocommerce_oo_get_sidebar');
-*/
+add_filter('woocommerce_banner' ,'woocommerce_get_banner');
+
