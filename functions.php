@@ -75,4 +75,13 @@ if(!is_home()){
   remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 ,0);
   remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ,0);
   remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 ,0);
+  remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+  remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10 );
   }
+
+if(!function_exists('loop_columns_3')){
+function loop_columns_3(){
+    return 3;
+  }
+}
+add_filter('loop_shop_columns','loop_columns_3');
