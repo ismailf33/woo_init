@@ -117,3 +117,11 @@ function woo_remove_catelog(){
   remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 ,0);
 }
 add_action('init' , 'woo_remove_catelog');
+/**
+ * Remove pagination
+ *  
+*/
+function woo_remove_pagination(){
+  remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 ,0);
+}
+add_action('init' , 'woo_remove_pagination');
