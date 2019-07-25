@@ -28,4 +28,5 @@
 }
 .woocommerce ul.products li.product .price ins {
     float: left;
+    margin-right: 10px;
 }
