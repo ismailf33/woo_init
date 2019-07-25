@@ -13,7 +13,7 @@
                             <div class="col col-sm-12 col-md-6">
                                 <div class="col col-sm-3 col-md-6 no-padding">
                                     <div class="lbl-cnt"> <span class="lbl">Sort by</span>
-                                        <div class="fld inline">
+                                        <div class="fld inline smile">
                                             <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
                                             <?php woocommerce_catalog_ordering(); ?>                 
                                             </div>

@@ -62,3 +62,7 @@
     height: 23px;
     padding: 0px 10px;
 }
+.fld.inline.smile select {
+    width: 110px;
+    margin-left: -15px;
+}

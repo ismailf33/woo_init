@@ -206,7 +206,6 @@ function ecom_woocommerce_catalog_page_ordering() {
    
   add_filter('loop_shop_per_page','dl_sort_by_page');
   
-  
   /**
    * woocommerce cutom ordering
    */
