@@ -75,9 +75,14 @@ if(!function_exists('loop_columns_3')){
     }
   }
   add_filter('loop_shop_columns','loop_columns_3');
-
-
-//  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ,0);
+/**
+ * Remove bradcams
+ *  
+*/
+function woo_remove_breadcramb(){
+  remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 ,0);
+}
+add_action('init' , 'woo_remove_breadcramb');
 
 /**
  * Change all things bradcams
@@ -94,3 +99,12 @@ return array(
 );
 }
 add_filter('woocommerce_breadcrumb_defaults'  , 'ecom_woocommerce_breadcum');
+
+/**
+ * Remove result_counter
+ *  
+*/
+function woo_remove_result_counter(){
+  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ,0);
+}
+add_action('init' , 'woo_remove_result_counter');
