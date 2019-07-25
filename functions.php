@@ -10,6 +10,7 @@ add_image_size( 'myFeatureImage',1300, 700, true);
 
 function wp_woo_enqueue(){
     wp_enqueue_style('font-awesome' , get_template_directory_uri().'/assets/css/font-awesome.css');
+    wp_enqueue_style('woocommerce' , get_template_directory_uri().'/assets/css/woocommerce.css');
     wp_enqueue_style('bootstrap' , get_template_directory_uri().'/assets/css/bootstrap.min.css');
     wp_enqueue_style('main' , get_template_directory_uri().'/assets/css/main.css');
     wp_enqueue_style('blue' , get_template_directory_uri().'/assets/css/blue.css ');
@@ -85,3 +86,5 @@ function loop_columns_3(){
   }
 }
 add_filter('loop_shop_columns','loop_columns_3');
+
+add_filter('woocommerce_show_page_title', '__return_false');
