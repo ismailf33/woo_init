@@ -20,11 +20,9 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 ?>
 <div class="breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-inner">
-                <ul class="list-inline list-unstyled">
-                    <li><a href="<?php esc_url(home_url('/'));?>">Home</a></li>
-                    <li class="active">shop</li>
+        <div class="container">           
+				<?php woocommerce_breadcrumb();?>
+                   
                 </ul>
             </div>
             <!-- /.breadcrumb-inner -->

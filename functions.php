@@ -94,3 +94,19 @@ function loop_columns_3(){
 add_filter('loop_shop_columns','loop_columns_3');
 
 //add_filter('woocommerce_show_page_title', '__return_false');
+
+/**
+ * Change all things bradcams
+ *  
+ * */
+function ecom_woocommerce_breadcum(){
+return array(
+  'delimiter' => '&#47',
+  'wrap_before' => '<div class="breadcrumb-inner"><ul class="list-inline list-unstyled">', 
+  'wrap_after' => '</ul></div>',
+  'before' => ' ', 
+  'after' => ' ', 
+  'home' => _x( 'Home', 'breadcrumb', 'woocommerce')
+);
+}
+add_filter('woocommerce_breadcrumb_defaults'  , 'ecom_woocommerce_breadcum');
