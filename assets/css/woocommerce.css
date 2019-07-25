@@ -26,3 +26,6 @@
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
 }
+.woocommerce ul.products li.product .price ins {
+    float: left;
+}
