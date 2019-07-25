@@ -22,7 +22,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
-	sprintf( '<a href="%s" data-quantity="%s" class="%s" %s>%s</a>',
+	sprintf( ' <div class="cart clearfix animate-effect">
+	<div class="action">
+		<ul class="list-unstyled">
+			<li class="add-cart-button btn-group">
+				<a href="%s" data-quantity="%s" class="%s" %s><i class="fa fa-shopping-cart"></i></a>				
+			</li>
+			<li class="lnk wishlist">
+				<a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a>
+			</li>
+			<li class="lnk">
+				<a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a>
+			</li>			
+		</ul>
+	</div>
+</div>',
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
 		esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),

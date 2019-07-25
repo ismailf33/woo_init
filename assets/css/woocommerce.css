@@ -1,0 +1,28 @@
+.woocommerce ul.products li.product .button {
+    background: rgb(155, 155, 34);
+    color: #fff;
+    margin-top: 0;
+    line-height: 18px;
+}
+.woocommerce ul.products li.product .button:hover {
+    background: rgb(189, 189, 231);
+    color: #fff;
+}
+.woocommerce a.added_to_cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background: green;
+    color: #fff;
+    line-height: 23px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.woocommerce-loop-product__title {
+    color: #555;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
