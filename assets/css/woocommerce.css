@@ -30,3 +30,28 @@
     float: left;
     margin-right: 10px;
 }
+.next.page-numbers , .prev.page-numbers {
+    background: none repeat scroll 0 0 #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0px 10px !important;
+}
+.next.page-numbers:hover , .prev.page-numbers:hover {
+    background: none repeat scroll 0 0 #157ed2;
+    color:#fff !important;
+}
+.page-numbers.current {
+    color: #157ed2;    
+}
+.list-inline > li {
+    display: inline-block;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+.filters-containerv{
+    padding: 15px 20px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    padding-bottom: 0px;
+}

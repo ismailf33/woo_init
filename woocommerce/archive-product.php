@@ -120,7 +120,19 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_no_products_found' );
 }
-
+?>
+		</div>
+		</div>
+	</div>
+</div>	
+<div class="clearfix filters-container">
+<div class="text-right">
+		<?php ecom_pagination(); ?>
+	<!-- /.pagination-container -->
+</div>
+<!-- /.text-right -->
+</div>
+<?php
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -128,9 +140,7 @@ if ( woocommerce_product_loop() ) {
  */
 do_action( 'woocommerce_after_main_content' );
 
-?>										</div>	
-									</div>	
-								</div>	
+?>									
 							</div>	
 						</div>
 					</div>
