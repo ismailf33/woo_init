@@ -55,3 +55,10 @@
     background-color: #fff;
     padding-bottom: 0px;
 }
+.woocommerce .woocommerce-ordering {
+    margin: 5px 0 1em 10px;
+}
+.woocommerce .woocommerce-ordering select {
+    height: 23px;
+    padding: 0px 10px;
+}
