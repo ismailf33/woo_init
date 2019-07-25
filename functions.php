@@ -57,37 +57,32 @@ add_action('after_setup_theme' , 'ceom_woocommerce_support');
 
 if ( ! function_exists( 'woocommerce_get_sidebar' ) ) { 
  
-    /** 
-     * Get the shop sidebar template. 
-     * 
-     */ 
+/** 
+ * Get the shop sidebar template. 
+ * 
+ */ 
     function woocommerce_get_sidebar() { 
         wc_get_template( 'template-part/sidebar/sidebar.php' ); 
     } 
   } 
-
-function woocommerce_get_banner() {
-    wc_get_template( 'template-part/content/banner.php' );   
-  }
-add_filter('woocommerce_banner' ,'woocommerce_get_banner');
-
-  remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 ,0);
-  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ,0);
-  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 ,0);
-  remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
-  remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10 );
-
+/**
+ * Showing post per row
+ *  
+*/
 if(!function_exists('loop_columns_3')){
-function loop_columns_3(){
-    return 3;
+  function loop_columns_3(){
+      return 3;
+    }
   }
-}
-add_filter('loop_shop_columns','loop_columns_3');
+  add_filter('loop_shop_columns','loop_columns_3');
+
+
+//  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ,0);
 
 /**
  * Change all things bradcams
  *  
- * */
+*/
 function ecom_woocommerce_breadcum(){
 return array(
   'delimiter' => '&#47',
